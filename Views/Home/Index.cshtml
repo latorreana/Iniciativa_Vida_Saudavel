@@ -1,0 +1,211 @@
+@model Interesse
+@* @{
+ViewData["Title"] = "Hotsite";
+} *@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <h1>Iniciativa Saúde da Cidade</h1>
+            <p>
+                Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
+                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+                hendrerit.
+            </p>
+            <p>
+                Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
+                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+                hendrerit.
+            </p>
+        </div>
+        <div class="col-6">
+            <img src="/img/Exercicio.jpg" alt="Pessoas se exercitando" title="Exercicio" class="img-fluid"
+                width="500px" />
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-6 border border-dark" id="frm">
+            <h2>Entre em contato!</h2>
+            <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+            <form method="POST" id="frmCadastro">
+                <div class="row">
+                    <div class="col-3">
+                        <label asp-for="Nome">Nome:</label>
+                    </div>
+                    <div class="col-9">
+                        <input asp-for="Nome" id="nome"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <label asp-for="Email">Email:</label>
+                    </div>
+                    <div class="col-9">
+                        <input asp-for="Email" id="email" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <label asp-for="Mensagem">Mensagem (opcional):</label>
+                    </div>
+                    <div class="col-9">
+                        <textarea asp-for="Mensagem" id="mensagem"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <input type="submit" value="Enviar" id="btnEnvio"class="mb-3" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="row col-6">
+            <div class="col-4">
+                <figure class="figure">
+                    <img src="/img/Agenda.jpg" alt="Agenda" title="Agenda" class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption text-center">
+                        <a href="#" data-toggle="modal" data-target="#AgendaDeEventos">Agenda de eventos</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-4">
+                <figure class="figure">
+                    <img src="/img/Dicas.jpg" alt="Comida saudável" title="Dicas de vida saudável"
+                        class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption text-center">
+                        <a href="#" data-toggle="modal" data-target="#DicasDeVidaSaudavel">Dicas de vida saudável</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-4">
+                <figure class="figure">
+                    <img src="/img/Apoiadores.jpg" alt="Pessoas felizes" title="Apoiadores"
+                        class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption text-center">
+                        <a href="#" data-toggle="modal" data-target="#Apoiadores">Apoiadores</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Agenda de Eventos -->
+<div class="modal fade" id="AgendaDeEventos" tabindex="-1" role="dialog" aria-labelledby="exampleAgendaDeEventos"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleAgendaDeEventos">AGENDA DE EVENTOS</h5>
+            </div>
+            <div class="modal-body">
+                <h5> 10/10/2023 - Evento 1</h5>
+                <h6> Lorem ipsum dolor sit amet. Qui asperiores veniam et doloribus assumenda At ratione excepturi! Id
+                    earum dolorem cum totam facilis vel fuga facere.</h6>
+                <br>
+                <h5> 10/11/2023 - Evento 2</h5>
+                <h6> Lorem ipsum dolor sit amet. Qui asperiores veniam et doloribus assumenda At ratione excepturi! Id
+                    earum dolorem cum totam facilis vel fuga facere.</h6>
+                <br>
+                <h5> 10/12/2023 - Evento 3</h5>
+                <h6> Lorem ipsum dolor sit amet. Qui asperiores veniam et doloribus assumenda At ratione excepturi! Id
+                    earum dolorem cum totam facilis vel fuga facere.</h6>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Dicas de vida saudável -->
+<div class="modal fade" id="DicasDeVidaSaudavel" tabindex="-1" role="dialog"
+    aria-labelledby="exampleDicasDeVidaSaudavel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleDicasDeVidaSaudavel">DICAS DE VIDA SAUDÁVEL</h5>
+            </div>
+            <div class="modal-body">
+                <h5> Lorem ipsum dolor sit amet. Et inventore aspernatur sed perspiciatis architecto est fugit esse! Hic
+                    assumenda debitis et nihil quam 33 magni velit aut recusandae autem aut ducimus atque non doloribus
+                    error!
+                    <br>
+                    <h5>Eum sapiente rerum et autem omnis ut delectus quasi. Est possimus autem qui alias dicta quo quam
+                        magni qui consequatur eveniet qui amet deserunt. Eos incidunt beatae et deleniti natus id omnis
+                        nobis cum voluptatem sint id quos velit? Qui error animi non labore consequatur ut asperiores
+                        commodi eum galisum voluptas et sunt fugit.</h5>
+                    <br>
+                    <h5>Quo consectetur maiores et repudiandae voluptatem est tenetur maiores et praesentium optio! Sit
+                        suscipit laboriosam sit reiciendis corrupti et earum obcaecati est neque tempora rem autem
+                        quibusdam. Rem quia eaque eum ipsa accusantium aut facilis culpa.</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Apoiadores -->
+<div class="modal fade" id="Apoiadores" tabindex="-1" role="dialog" aria-labelledby="exampleApoiadores"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleApoiadores">APOIADORES</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="/img/healthy.png" width="100px">
+                    </div>
+                    <div class="col-9">
+                        <h5> Empresa 1</h5>
+                        <h6> Lorem ipsum dolor sit amet. Qui asperiores veniam et doloribus assumenda At ratione
+                            excepturi!</h6>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3">
+                        <img src="/img/happy.png" width="90px">
+                    </div>
+                    <div class="col-9">
+                        <h5> Empresa 2</h5>
+                        <h6> Lorem ipsum dolor sit amet. Qui asperiores veniam et doloribus assumenda At ratione
+                            excepturi!</h6>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3">
+                        <img src="/img/maca.png" width="80px">
+                    </div>
+                    <div class="col-9">
+                        <h5> Empresa 3</h5>
+                        <h6> Lorem ipsum dolor sit amet. Qui asperiores veniam et doloribus assumenda At ratione
+                            excepturi!</h6>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3">
+                        <img src="/img/abacate.png" width="100px">
+                    </div>
+                    <div class="col-9">
+                        <h5> Empresa 4</h5>
+                        <h6> Lorem ipsum dolor sit amet. Qui asperiores veniam et doloribus assumenda At ratione
+                            excepturi!</h6>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
