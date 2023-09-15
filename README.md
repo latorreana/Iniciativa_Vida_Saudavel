@@ -1,3 +1,3 @@
 ﻿# Iniciativa_Vida_Saudavel
 
-- Link do deploy: testedeployuc06.azurewebsites.net
+- Link do deploy: https://testedeployuc06.azurewebsites.net/
